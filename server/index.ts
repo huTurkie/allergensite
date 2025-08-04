@@ -1,8 +1,17 @@
 import express, { type Request, Response, NextFunction } from "express";
 import { registerRoutes } from "./routes";
 import { setupVite, serveStatic, log } from "./vite";
+import cors from "cors";
 
 const app = express();
+
+// Configure CORS to allow requests from your Cloudflare frontend
+// and to support credentials (cookies, authorization headers)
+app.use(cors({
+  origin: "https://allergenwebsite.pages.dev",
+  credentials: true,
+}));
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
