@@ -39,7 +39,15 @@ export default function Navigation() {
             <span className="text-2xl font-bold text-gray-900">AllergenAI</span>
           </div>
           
-          <div className="hidden md:flex space-x-8">
+          <div className="hidden md:flex items-center space-x-8">
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSebTPDR-L-N-0Zo1hku90njHW67OQAY2jqg9slUKFdpzabiuw/viewform?usp=dialog"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-blue-violet-600 text-white px-4 py-2 rounded-md hover:bg-blue-violet-700 transition-colors font-semibold"
+            >
+              Join the waiting list
+            </a>
             <button 
               onClick={() => scrollToSection('features')}
               className="text-gray-600 hover:text-blue-violet-600 transition-colors"
@@ -86,6 +94,14 @@ export default function Navigation() {
             className="md:hidden py-4 border-t border-gray-100"
           >
             <div className="flex flex-col space-y-4">
+              <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLSebTPDR-L-N-0Zo1hku90njHW67OQAY2jqg9slUKFdpzabiuw/viewform?usp=dialog"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-blue-violet-600 text-white px-4 py-2 rounded-md hover:bg-blue-violet-700 transition-colors font-semibold text-center"
+              >
+                Join the waiting list
+              </a>
               <button 
                 onClick={() => scrollToSection('features')}
                 className="text-gray-600 hover:text-blue-violet-600 transition-colors text-left"
