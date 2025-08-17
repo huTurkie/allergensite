@@ -7,8 +7,8 @@ const footerLinks = {
     { name: "Feature Requests", href: "#" }
   ],
   legal: [
-    { name: "Privacy Policy", href: "#" },
-    { name: "Terms of Service", href: "#" }
+    { name: "Terms of Service", href: "/terms" },
+    { name: "Privacy Policy", href: "/privacy" }
   ]
 };
 
@@ -82,10 +82,6 @@ export default function Footer() {
               ))}
             </ul>
           </div>
-        </div>
-
-        <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
-          <p>&copy; 2025 AllergenAI. All rights reserved.</p>
         </div>
       </div>
     </footer>
