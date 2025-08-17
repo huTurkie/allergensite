@@ -3,12 +3,12 @@ import leafLogo from "../assets/leaf-logo.png";
 
 const footerLinks = {
   support: [
-    { name: "Contact Us", href: "#" },
-    { name: "Feature Requests", href: "#" }
+    { name: "Contact Us", href: "mailto:support@allergenai.app" },
+    { name: "Feature Requests", href: "mailto:support@allergenai.app?subject=Feature%20Request" }
   ],
   legal: [
-    { name: "Terms of Service", href: "/terms" },
-    { name: "Privacy Policy", href: "/privacy" }
+    { name: "Terms of Service", href: "/terms", target: "_blank" },
+    { name: "Privacy Policy", href: "/privacy", target: "_blank" }
   ]
 };
 
@@ -73,9 +73,14 @@ export default function Footer() {
           <div className="text-center lg:text-left lg:mr-16">
             <h4 className="text-lg font-semibold mb-4">Legal</h4>
             <ul className="space-y-2 text-gray-400">
-              {footerLinks.legal.map((link) => (
+              {Object.entries(footerLinks.legal).map(([category, link]) => (
                 <li key={link.name}>
-                  <a href={link.href} className="hover:text-white transition-colors">
+                  <a 
+                    href={link.href} 
+                    target={link.target} 
+                    rel={link.target === "_blank" ? "noopener noreferrer" : undefined}
+                    className="hover:text-white transition-colors"
+                  >
                     {link.name}
                   </a>
                 </li>

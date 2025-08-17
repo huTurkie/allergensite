@@ -48,30 +48,30 @@ export default function Navigation() {
             >
               Join the waiting list
             </a>
-            <button 
-              onClick={() => scrollToSection('features')}
+            <a 
+              href="/#features"
               className="text-gray-600 hover:text-blue-violet-600 transition-colors"
             >
               Features
-            </button>
-            <button 
-              onClick={() => scrollToSection('benefits')}
+            </a>
+            <a 
+              href="/#benefits"
               className="text-gray-600 hover:text-blue-violet-600 transition-colors"
             >
               Benefits
-            </button>
-            <button 
-              onClick={() => scrollToSection('testimonials')}
+            </a>
+            <a 
+              href="/#testimonials"
               className="text-gray-600 hover:text-blue-violet-600 transition-colors"
             >
               Reviews
-            </button>
-            <button 
-              onClick={() => scrollToSection('download')}
+            </a>
+            <a 
+              href="/#download"
               className="text-gray-600 hover:text-blue-violet-600 transition-colors"
             >
               Download
-            </button>
+            </a>
           </div>
           
           <button 
@@ -102,30 +102,30 @@ export default function Navigation() {
               >
                 Join the waiting list
               </a>
-              <button 
-                onClick={() => scrollToSection('features')}
+              <a 
+                href="/#features"
                 className="text-gray-600 hover:text-blue-violet-600 transition-colors text-left"
               >
                 Features
-              </button>
-              <button 
-                onClick={() => scrollToSection('benefits')}
+              </a>
+              <a 
+                href="/#benefits"
                 className="text-gray-600 hover:text-blue-violet-600 transition-colors text-left"
               >
                 Benefits
-              </button>
-              <button 
-                onClick={() => scrollToSection('testimonials')}
+              </a>
+              <a 
+                href="/#testimonials"
                 className="text-gray-600 hover:text-blue-violet-600 transition-colors text-left"
               >
                 Reviews
-              </button>
-              <button 
-                onClick={() => scrollToSection('download')}
+              </a>
+              <a 
+                href="/#download"
                 className="text-gray-600 hover:text-blue-violet-600 transition-colors text-left"
               >
                 Download
-              </button>
+              </a>
             </div>
           </motion.div>
         )}
