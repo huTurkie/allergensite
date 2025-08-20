@@ -42,6 +42,11 @@ export async function setupVite(app: Express, server: Server) {
 
   app.use(vite.middlewares);
   app.use("*", async (req, res, next) => {
+    // Skip this middleware if the request is for a file (e.g., .html, .css, .js)
+    if (path.extname(req.originalUrl)) {
+      return next();
+    }
+
     const url = req.originalUrl;
 
     try {
@@ -75,8 +80,6 @@ export function serveStatic(app: Express) {
       `Could not find the build directory: ${distPath}, make sure to build the client first`,
     );
   }
-
-  app.use(express.static(distPath));
 
   // fall through to index.html if the file doesn't exist
   app.use("*", (_req, res) => {
