@@ -57,6 +57,12 @@ app.use((req, res, next) => {
     throw err;
   });
 
+  // Serve static files from the 'public' directory for development
+  if (app.get("env") === "development") {
+    const publicPath = path.resolve(import.meta.dirname, "..", "public");
+    app.use(express.static(publicPath));
+  }
+
   // importantly only setup vite in development and after
   // setting up all the other routes so the catch-all route
   // doesn't interfere with the other routes
